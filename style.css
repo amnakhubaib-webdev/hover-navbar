@@ -1,0 +1,183 @@
+:root {
+    --color-primary: #0073ff;
+    --color-white: #e9e9e9;
+    --color-black: #141d28;
+    --color-black-1: #212b38;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+
+.body {
+    font-family: sans-serif;
+}
+
+.navbar {
+    background-color: var(--color-black);
+    height: 80px;
+    width: 100%;
+    display: flex;
+    transition: background 1s;
+    align-items: center;
+    justify-content: space-between;
+    padding: 18px 8%;
+}
+
+.logo {
+    width: 60px;
+    margin-right: 10px;
+    display: flex;
+    align-items: center;
+    font-size: 26px;
+    font-weight: 600;
+    color: var(--color-white);
+    font-size: 30px;
+
+}
+
+.logospan {
+    color: var(--color-primary)
+}
+
+.navbar ul {
+    list-style: none;
+    display: flex;
+
+}
+
+.navbar ul li {
+    padding: 10px 30px;
+    position: relative;
+}
+
+.navbar ul li a {
+    color: var(--color-white);
+    text-decoration: none;
+    font-size: 20px;
+    transition: all 0.1s;
+
+}
+
+.navbar ul li a:hover {
+    color: var(--color-primary);
+
+}
+
+.dropdown-navbar {
+    display: none;
+}
+
+.navbar ul li:hover .dropdown-navbar {
+    display: inline-block;
+    position: absolute;
+    left: 0;
+    top: 100%;
+    background-color: var(--color-black);
+}
+
+.navbar ul li:hover .dropdown-navbar ul {
+    display: block;
+    margin: 10px;
+}
+
+.navbar ul li:hover .dropdown-navbar ul li {
+    width: 150px;
+    padding: 10px;
+
+}
+
+.fas {
+    float: right;
+    margin-left: 10px;
+    padding-top: 3px;
+}
+
+.header {
+    width: 100%;
+    height: 100vh;
+    background-image: linear-gradient(rgba(120, 122, 199, 0.5), rgba(111, 82, 32, 0.5)), url(IrM.gif);
+    background-position: center;
+    background-size: cover;
+    overflow-x: hidden;
+}
+
+.navbar:hover {
+    background: #6c6c6c;
+}
+
+.navbar:hover .logo {
+    /* color: #; */
+}
+
+.navbar:hover ul li a {
+    color: #ffffff;
+}
+
+.navbar ul li a:hover {
+    color: #c0d408;
+
+}
+
+.content {
+    margin-left: 9%;
+    color: #fff;
+}
+
+.content h1 {
+    font-size: 120px;
+    line-height: 140px;
+    font-weight: 600;
+}
+
+.content p {
+    max-width: 500px;
+    line-height: 28px;
+    opacity: 0;
+}
+
+.links {
+    margin-top: 30px;
+    opacity: 0;
+}
+
+.links a {
+    color: #fff;
+    text-decoration: none;
+    display: inline-block;
+}
+
+.btn {
+    border: 2px solid #fff;
+    padding: 10px 35px;
+    border-radius: 30px;
+    margin-right: 15px;
+}
+
+.slide-left {
+    animation: slide-left 1s linear forwards;
+}
+
+@keyframes slide-left {
+    0% {
+        transform: translate(100px);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translate(0px);
+        opacity: 1;
+    }
+}
+
+p.slide-left {
+    animation-delay: 1s;
+}
+
+.links.slide-left {
+    animation-delay: 2s;
+
+}
